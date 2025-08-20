@@ -52,10 +52,18 @@ export const MY_STACK = {
         },
         {
             name: 'Redis',
-            icon: '/logo/prisma.png',
+            icon: '/logo/redis.png',
         },
     ],
-    tools: [
+    "cloud & tools": [
+        {
+            name: 'AWS',
+            icon: '/logo/aws.png',
+        },
+        {
+            name: 'Azure',
+            icon: '/logo/azure.png',
+        },
         {
             name: 'Git',
             icon: '/logo/git.png',
@@ -63,11 +71,7 @@ export const MY_STACK = {
         {
             name: 'Docker',
             icon: '/logo/docker.svg',
-        },
-        {
-            name: 'AWS',
-            icon: '/logo/aws.png',
-        },
+        }
     ],
 };
 
