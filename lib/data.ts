@@ -21,7 +21,7 @@ export const MY_STACK = {
         },
         {
             name: 'Go',
-            icon: '/logo/go.svg',
+            icon: '/logo/go.png',
         },
         {
             name: 'FastAPI',
