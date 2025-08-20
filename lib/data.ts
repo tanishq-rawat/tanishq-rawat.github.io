@@ -1,20 +1,16 @@
 import { IProject } from '@/types';
 
 export const GENERAL_INFO = {
-    email: 'tasmirolislam@gmail.com',
+    email: 'tanishq.rawat@taskgrid.in',
 
     emailSubject: "Let's collaborate on a project",
-    emailBody: 'Hi Tajmirul, I am reaching out to you because...',
-
-    oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
-    upworkProfile: 'https://www.upwork.com/freelancers/tajmirul',
+    emailBody: 'Hi Tanishq, I am reaching out to you because...',
 };
 
 export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/Tajmirul' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/tajmirul' },
-    { name: 'facebook', url: 'https://www.facebook.com/tajmirul.2000' },
-    { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
+    { name: 'github', url: 'https://github.com/tanishq-rawat' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/tanishqrawat17' },
+    { name: 'instagram', url: 'https://www.instagram.com/tanishqrawat/' },
 ];
 
 export const MY_STACK = {
@@ -286,23 +282,23 @@ export const PROJECTS: IProject[] = [
 
 export const MY_EXPERIENCE = [
     {
-        title: 'Software Engineer (Frontend)',
-        company: 'Strativ AB',
-        duration: 'Dec 2024 - Present',
+        title: 'Software Engineer',
+        company: 'Simform Solutions',
+        duration: 'Feb 2025 - Present',
     },
     {
-        title: 'Frontend Developer',
-        company: 'Epikcoders',
-        duration: 'Oct 2023 - Nov 2024',
+        title: 'Software Engineer',
+        company: 'Mobileum',
+        duration: 'Apr 2024 - Feb 2025',
     },
     {
-        title: 'Frontend Engineer',
-        company: 'Anchorblock Technology',
-        duration: 'Oct 2022 - Sep 2023',
+        title: 'Associate Software Engineer',
+        company: 'Mobileum',
+        duration: 'Aug 2022 - Mar 2024',
     },
     {
-        title: 'Frontend Developer (Part-time)',
-        company: 'Branex IT',
-        duration: 'Jan 2022 - Oct 2022',
+        title: 'AI Software Engineer',
+        company: 'Cerebry',
+        duration: 'Aug 2021 - Feb 2022',
     },
 ];
