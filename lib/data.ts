@@ -14,6 +14,20 @@ export const SOCIAL_LINKS = [
 ];
 
 export const MY_STACK = {
+    backend: [
+        {
+            name: 'Python',
+            icon: '/logo/python.png',
+        },
+        {
+            name: 'Go',
+            icon: '/logo/go.svg',
+        },
+        {
+            name: 'FastAPI',
+            icon: '/logo/fastapi.png',
+        },
+    ],
     frontend: [
         {
             name: 'JavaScript',
@@ -54,20 +68,6 @@ export const MY_STACK = {
         {
             name: 'Bootstrap',
             icon: '/logo/bootstrap.svg',
-        },
-    ],
-    backend: [
-        {
-            name: 'Node.js',
-            icon: '/logo/node.png',
-        },
-        {
-            name: 'NestJS',
-            icon: '/logo/nest.svg',
-        },
-        {
-            name: 'Express.js',
-            icon: '/logo/express.png',
         },
     ],
     database: [
