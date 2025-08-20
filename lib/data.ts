@@ -24,51 +24,18 @@ export const MY_STACK = {
             icon: '/logo/go.png',
         },
         {
+            name: 'C++',
+            icon: '/logo/c++.png',
+        },
+        {
             name: 'FastAPI',
             icon: '/logo/fastapi.png',
         },
-    ],
-    frontend: [
         {
-            name: 'JavaScript',
-            icon: '/logo/js.png',
+            name: 'Django',
+            icon: '/logo/django.png',
         },
-        {
-            name: 'TypeScript',
-            icon: '/logo/ts.png',
-        },
-        {
-            name: 'React',
-            icon: '/logo/react.png',
-        },
-        {
-            name: 'Next.js',
-            icon: '/logo/next.png',
-        },
-        {
-            name: 'Redux',
-            icon: '/logo/redux.png',
-        },
-        {
-            name: 'Tailwind CSS',
-            icon: '/logo/tailwind.png',
-        },
-        {
-            name: 'GSAP',
-            icon: '/logo/gsap.png',
-        },
-        {
-            name: 'Framer Motion',
-            icon: '/logo/framer-motion.png',
-        },
-        {
-            name: 'Sass',
-            icon: '/logo/sass.png',
-        },
-        {
-            name: 'Bootstrap',
-            icon: '/logo/bootstrap.svg',
-        },
+        
     ],
     database: [
         {
@@ -84,7 +51,7 @@ export const MY_STACK = {
             icon: '/logo/mongodb.svg',
         },
         {
-            name: 'Prisma',
+            name: 'Redis',
             icon: '/logo/prisma.png',
         },
     ],
