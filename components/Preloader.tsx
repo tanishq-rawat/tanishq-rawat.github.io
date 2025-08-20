@@ -61,9 +61,7 @@ const Preloader = () => {
                 <span className="inline-block translate-y-full">S</span>
                 <span className="inline-block translate-y-full">H</span>
                 <span className="inline-block translate-y-full">Q</span>
-            </p>
-            <br />
-            <p className="name-text flex text-[20vw] lg:text-[200px] font-anton text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 leading-none overflow-hidden">
+                <span className="inline-block translate-y-full"> </span>
                 <span className="inline-block translate-y-full">R</span>
                 <span className="inline-block translate-y-full">A</span>
                 <span className="inline-block translate-y-full">W</span>
