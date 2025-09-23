@@ -1,17 +1,27 @@
-import AboutMe from './_components/AboutMe';
-import Banner from './_components/Banner';
-import Experiences from './_components/Experiences';
-import Skills from './_components/Skills';
-import ProjectList from './_components/ProjectList';
+import { Navigation } from "@/components/navigation"
+import { HeroSection } from "@/components/hero-section"
+import { AboutSection } from "@/components/about-section"
+import { ExperienceSection } from "@/components/experience-section"
+import { SkillsSection } from "@/components/skills-section"
+import { BlogsSection } from "@/components/blogs-section"
+import { ResearchSection } from "@/components/research-section"
+import { ProjectsSection } from "@/components/projects-section"
+import { ContactSection } from "@/components/contact-section"
 
-export default function Home() {
-    return (
-        <div className="page-">
-            <Banner />
-            <AboutMe />
-            <Skills />
-            <Experiences />
-            <ProjectList />
-        </div>
-    );
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Navigation />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <SkillsSection />
+        <BlogsSection />
+        <ResearchSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
+    </div>
+  )
 }
