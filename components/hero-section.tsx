@@ -18,22 +18,22 @@ export function HeroSection() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Engineering Background */}
-      <div className="absolute inset-0 opacity-50">
+      <div className="absolute inset-0 opacity-50 md:opacity-50 opacity-20">
         {/* Floating Code Snippets */}
         <div className="absolute animate-float-slow" style={{ left: "5%", top: "10%" }}>
-          <div className="text-sm font-mono text-primary/90 whitespace-pre backdrop-blur-sm bg-background/10 p-2 rounded">
+          <div className="text-sm font-mono text-primary/50 md:text-primary/90 whitespace-pre backdrop-blur-sm bg-background/10 p-2 rounded">
             {`const server = express()
 app.listen(3000)`}
           </div>
         </div>
         <div className="absolute animate-float-slow" style={{ right: "10%", top: "15%", animationDelay: "3s" }}>
-          <div className="text-sm font-mono text-accent/90 whitespace-pre backdrop-blur-sm bg-background/10 p-2 rounded">
+          <div className="text-sm font-mono text-accent/50 md:text-accent/90 whitespace-pre backdrop-blur-sm bg-background/10 p-2 rounded">
             {`SELECT * FROM users
 WHERE active = true`}
           </div>
         </div>
         <div className="absolute animate-float-slow" style={{ left: "15%", bottom: "20%", animationDelay: "6s" }}>
-          <div className="text-sm font-mono text-primary/90 whitespace-pre backdrop-blur-sm bg-background/10 p-2 rounded">
+          <div className="text-sm font-mono text-primary/50 md:text-primary/90 whitespace-pre backdrop-blur-sm bg-background/10 p-2 rounded">
             {`{
   "status": "success",
   "data": [...results]
@@ -46,7 +46,7 @@ WHERE active = true`}
           <defs>
             <linearGradient id="dataFlow" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="transparent" />
-              <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
+              <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.5" className="md:stop-opacity-80" />
               <stop offset="100%" stopColor="transparent" />
             </linearGradient>
           </defs>
@@ -55,9 +55,10 @@ WHERE active = true`}
           <path
             d="M 50 100 Q 200 50 350 100 T 650 100"
             stroke="url(#dataFlow)"
-            strokeWidth="3"
+            strokeWidth="2"
+            strokeOpacity="0.4"
+            className="md:stroke-opacity-100 md:stroke-2 animate-pulse"
             fill="none"
-            className="animate-pulse"
             strokeDasharray="20 10"
             strokeDashoffset="30"
             style={{
@@ -67,9 +68,10 @@ WHERE active = true`}
           <path
             d="M 100 300 Q 300 250 500 300 T 800 300"
             stroke="url(#dataFlow)"
-            strokeWidth="3"
+            strokeWidth="2"
+            strokeOpacity="0.4"
+            className="md:stroke-opacity-100 md:stroke-2 animate-pulse"
             fill="none"
-            className="animate-pulse"
             strokeDasharray="15 8"
             strokeDashoffset="20"
             style={{
@@ -81,45 +83,45 @@ WHERE active = true`}
 
         {/* Circuit Board Pattern */}
         <div className="absolute inset-0">
-          <div className="absolute w-px h-20 bg-primary/60" style={{ left: "20%", top: "30%", transform: "rotate(45deg)" }} />
-          <div className="absolute w-px h-16 bg-accent/60" style={{ right: "25%", top: "40%", transform: "rotate(-45deg)" }} />
-          <div className="absolute w-20 h-px bg-primary/60" style={{ left: "60%", top: "60%" }} />
-          <div className="absolute w-16 h-px bg-accent/60" style={{ left: "30%", bottom: "35%" }} />
+          <div className="absolute w-px h-20 bg-primary/30 md:bg-primary/60" style={{ left: "20%", top: "30%", transform: "rotate(45deg)" }} />
+          <div className="absolute w-px h-16 bg-accent/30 md:bg-accent/60" style={{ right: "25%", top: "40%", transform: "rotate(-45deg)" }} />
+          <div className="absolute w-20 h-px bg-primary/30 md:bg-primary/60" style={{ left: "60%", top: "60%" }} />
+          <div className="absolute w-16 h-px bg-accent/30 md:bg-accent/60" style={{ left: "30%", bottom: "35%" }} />
           
           {/* Circuit nodes */}
-          <div className="absolute w-3 h-3 bg-primary/80 rounded-full animate-pulse shadow-lg shadow-primary/50" style={{ left: "20%", top: "35%" }} />
-          <div className="absolute w-3 h-3 bg-accent/80 rounded-full animate-pulse shadow-lg shadow-accent/50" style={{ right: "25%", top: "45%", animationDelay: "1s" }} />
-          <div className="absolute w-3 h-3 bg-primary/80 rounded-full animate-pulse shadow-lg shadow-primary/50" style={{ left: "70%", top: "60%", animationDelay: "2s" }} />
+          <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-primary/40 md:bg-primary/80 rounded-full animate-pulse shadow-lg shadow-primary/30 md:shadow-primary/50" style={{ left: "20%", top: "35%" }} />
+          <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-accent/40 md:bg-accent/80 rounded-full animate-pulse shadow-lg shadow-accent/30 md:shadow-accent/50" style={{ right: "25%", top: "45%", animationDelay: "1s" }} />
+          <div className="absolute w-2 h-2 md:w-3 md:h-3 bg-primary/40 md:bg-primary/80 rounded-full animate-pulse shadow-lg shadow-primary/30 md:shadow-primary/50" style={{ left: "70%", top: "60%", animationDelay: "2s" }} />
         </div>
 
         {/* API Endpoint Indicators */}
         <div className="absolute animate-float" style={{ left: "8%", top: "60%", animationDelay: "2s" }}>
-          <div className="flex items-center space-x-2 text-sm font-mono text-accent/90 backdrop-blur-sm bg-background/20 p-2 rounded-md border border-accent/20">
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
+          <div className="flex items-center space-x-2 text-sm font-mono text-accent/50 md:text-accent/90 backdrop-blur-sm bg-background/20 p-2 rounded-md border border-accent/10 md:border-accent/20">
+            <div className="w-2 h-2 md:w-3 md:h-3 bg-green-400 opacity-50 md:opacity-100 rounded-full animate-pulse shadow-lg shadow-green-400/30 md:shadow-green-400/50" />
             <span>GET /api/users</span>
           </div>
         </div>
         <div className="absolute animate-float" style={{ right: "12%", bottom: "40%", animationDelay: "4s" }}>
-          <div className="flex items-center space-x-2 text-sm font-mono text-primary/90 backdrop-blur-sm bg-background/20 p-2 rounded-md border border-primary/20">
-            <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse shadow-lg shadow-blue-400/50" />
+          <div className="flex items-center space-x-2 text-sm font-mono text-primary/50 md:text-primary/90 backdrop-blur-sm bg-background/20 p-2 rounded-md border border-primary/10 md:border-primary/20">
+            <div className="w-2 h-2 md:w-3 md:h-3 bg-blue-400 opacity-50 md:opacity-100 rounded-full animate-pulse shadow-lg shadow-blue-400/30 md:shadow-blue-400/50" />
             <span>POST /api/data</span>
           </div>
         </div>
 
         {/* Floating Tech Icons/Symbols */}
         <div className="absolute animate-bounce-slow" style={{ left: "75%", top: "25%", animationDelay: "3s" }}>
-          <div className="text-3xl opacity-80 drop-shadow-lg">⚡</div>
+          <div className="text-2xl md:text-3xl opacity-40 md:opacity-80 drop-shadow-lg">⚡</div>
         </div>
         <div className="absolute animate-bounce-slow" style={{ left: "85%", bottom: "30%", animationDelay: "5s" }}>
-          <div className="text-3xl opacity-80 drop-shadow-lg">🔗</div>
+          <div className="text-2xl md:text-3xl opacity-40 md:opacity-80 drop-shadow-lg">🔗</div>
         </div>
         <div className="absolute animate-bounce-slow" style={{ left: "25%", top: "70%", animationDelay: "1s" }}>
-          <div className="text-3xl opacity-80 drop-shadow-lg">⚙️</div>
+          <div className="text-2xl md:text-3xl opacity-40 md:opacity-80 drop-shadow-lg">⚙️</div>
         </div>
 
         {/* Gradient Orbs (Original but reduced opacity) */}
         <div
-          className="absolute w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-float"
+          className="absolute w-96 h-96 bg-primary/10 md:bg-primary/30 rounded-full blur-3xl animate-float"
           style={{
             transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
             left: "10%",
@@ -127,7 +129,7 @@ WHERE active = true`}
           }}
         />
         <div
-          className="absolute w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-float"
+          className="absolute w-80 h-80 bg-accent/10 md:bg-accent/20 rounded-full blur-3xl animate-float"
           style={{
             transform: `translate(${mousePosition.x * -0.01}px, ${mousePosition.y * -0.01}px)`,
             right: "10%",
