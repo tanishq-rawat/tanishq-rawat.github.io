@@ -8,77 +8,34 @@ import { Github, ExternalLink, Star, GitFork } from "lucide-react"
 
 const projects = [
   {
-    title: "AI-Powered Code Review Assistant",
+    title: "Comparative Study for Backend in AI-Driven APIs",
     description:
-      "An intelligent code review tool that uses machine learning to identify potential bugs, security vulnerabilities, and suggest improvements. Integrated with popular version control systems.",
+      "This project conducts a comparative study of backend frameworks and languages—Python (FastAPI), Node.js (Express), C++ (Crow), and Java (Spring Boot)—for serving real-time AI inference APIs. Using a practical use case (predicting second-hand iPhone prices).",
     image: "/ai-code-review-dashboard-interface.jpg",
-    technologies: ["Python", "TensorFlow", "FastAPI", "React", "PostgreSQL", "Docker"],
-    github: "#",
-    demo: "#",
-    stars: 1247,
-    forks: 89,
+    technologies: ["AI APIs", "FastAPI", "Express", "Springboot", "Crow", "Docker"],
+    github: "https://github.com/tanishq-rawat/Comparative-Study-for-Backend-in-AI-Driven-APIs",
     featured: true,
   },
   {
-    title: "Distributed Task Queue System",
+    title: "Cloud On Tips",
     description:
-      "A high-performance, fault-tolerant distributed task queue system built with Go. Supports priority queues, delayed tasks, and horizontal scaling across multiple nodes.",
+      "There are millions of developers willing to deploy their application on cloud to make them publicly accessible. But not all of them are aware about cloud services and their configurations. Such as creating and configuring Virtual Private Servers (VPS) or for small scale API's using serverless computing services such as AWS Lambda or Azure functions.",
     image: "/distributed-system-architecture-diagram.jpg",
-    technologies: ["Go", "Redis", "gRPC", "Kubernetes", "Prometheus", "Grafana"],
-    github: "#",
-    demo: "#",
-    stars: 892,
-    forks: 156,
+    technologies: ["Django", "AWS", "Celery", "Redis", "MongoDB"],
+    github: "https://github.com/tanishq-rawat/CloudOnTips",
+    demo: "https://youtu.be/5xwmuKZXdIc",
     featured: true,
   },
   {
-    title: "Real-time Analytics Platform",
+    title: "Real-time Analytics - Formula-1",
     description:
-      "A scalable real-time analytics platform that processes millions of events per second. Features custom dashboards, alerting, and machine learning-based anomaly detection.",
+      "A real-time analytics dashboard for Formula-1 racing data. Ingests live telemetry",
     image: "/real-time-analytics-dashboard-with-charts.jpg",
-    technologies: ["Apache Kafka", "ClickHouse", "Node.js", "Vue.js", "Docker", "AWS"],
-    github: "#",
-    demo: "#",
-    stars: 634,
-    forks: 78,
+    technologies: ["PySpark", "Azure", "Data Engineering", "ETL"],
+    github: "https://github.com/tanishq-rawat/Formula-1",
+    demo: "https://youtu.be/EEnuW8ZqbVg",
     featured: true,
-  },
-  {
-    title: "Blockchain-based Supply Chain Tracker",
-    description:
-      "A transparent supply chain tracking system using blockchain technology. Enables end-to-end traceability of products from manufacturing to delivery.",
-    image: "/blockchain-supply-chain-tracking-interface.jpg",
-    technologies: ["Solidity", "Web3.js", "Node.js", "MongoDB", "React", "Ethereum"],
-    github: "#",
-    demo: "#",
-    stars: 445,
-    forks: 67,
-    featured: false,
-  },
-  {
-    title: "Microservices Monitoring Suite",
-    description:
-      "Comprehensive monitoring and observability suite for microservices architectures. Includes distributed tracing, metrics collection, and automated alerting.",
-    image: "/microservices-monitoring-dashboard.jpg",
-    technologies: ["Go", "Jaeger", "Prometheus", "Grafana", "Kubernetes", "Helm"],
-    github: "#",
-    demo: "#",
-    stars: 723,
-    forks: 134,
-    featured: false,
-  },
-  {
-    title: "Natural Language Processing API",
-    description:
-      "RESTful API for various NLP tasks including sentiment analysis, named entity recognition, and text summarization. Built for high throughput and low latency.",
-    image: "/nlp-api-documentation-interface.jpg",
-    technologies: ["Python", "spaCy", "FastAPI", "Redis", "Docker", "AWS Lambda"],
-    github: "#",
-    demo: "#",
-    stars: 567,
-    forks: 89,
-    featured: false,
-  },
+  }
 ]
 
 export function ProjectsSection() {
@@ -137,7 +94,7 @@ export function ProjectsSection() {
                     <CardTitle className="text-xl group-hover:text-primary transition-colors duration-200 text-balance">
                       {project.title}
                     </CardTitle>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                    {/* <div className="flex items-center gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <Star className="h-4 w-4" />
                         {project.stars}
@@ -146,7 +103,7 @@ export function ProjectsSection() {
                         <GitFork className="h-4 w-4" />
                         {project.forks}
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -180,7 +137,7 @@ export function ProjectsSection() {
 
         {/* Other Projects */}
         <div>
-          <h3 className="text-2xl font-bold mb-8 text-primary">Other Projects</h3>
+          {/* <h3 className="text-2xl font-bold mb-8 text-primary">Other Projects</h3> */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherProjects.map((project, index) => (
               <Card
@@ -193,12 +150,12 @@ export function ProjectsSection() {
                     <CardTitle className="text-lg group-hover:text-primary transition-colors duration-200 text-balance">
                       {project.title}
                     </CardTitle>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    {/* <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <Star className="h-3 w-3" />
                         {project.stars}
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </CardHeader>
                 <CardContent>

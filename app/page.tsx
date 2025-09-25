@@ -18,8 +18,8 @@ export default function Portfolio() {
         <ExperienceSection />
         <SkillsSection />
         <BlogsSection />
-        <ResearchSection />
         <ProjectsSection />
+        <ResearchSection />
         <ContactSection />
       </main>
     </div>

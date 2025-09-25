@@ -73,7 +73,7 @@ export function ContactSection() {
                   <div>
                     <p className="font-semibold">Phone</p>
                     <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      +1 (234) 567-8900
+                      +91 8982416479
                     </a>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold">Location</p>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">Ujjain, Madhya Pradesh, India</p>
                   </div>
                 </div>
               </CardContent>

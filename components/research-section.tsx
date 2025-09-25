@@ -8,49 +8,33 @@ import { Calendar, Users, ExternalLink, FileText, ChevronDown, ChevronUp } from 
 
 const researchPapers = [
   {
-    title: "Efficient Neural Architecture Search for Edge Computing Devices",
-    authors: ["Your Name", "Co-Author 1", "Co-Author 2"],
-    venue: "International Conference on Machine Learning (ICML) 2024",
-    date: "2024-07-15",
-    abstract:
-      "This paper presents a novel approach to neural architecture search specifically optimized for edge computing devices with limited computational resources. Our method achieves 15% better accuracy while reducing inference time by 40% compared to existing approaches.",
-    keywords: ["Neural Architecture Search", "Edge Computing", "Mobile AI", "Optimization"],
-    link: "#",
-    citations: 23,
+    title: "Comparative Study for Backend in AI-Driven APIs",
+    authors: ["Tanishq Rawat"],
+    venue: "Arxiv",
+    date: "To be published",
+    abstract:"The demand for real-time AI-powered APIs is rapidly increasing across industries, necessitating backend frameworks that are efficient, scalable, and portable. This study benchmarks the performance of four widely-used backend technologies—Python (FastAPI), C++ (Crow), Java (SpringBoot), and Node.js (Express)—in serving an AI model designed to predict second-hand iPhone prices. The model, exported to the ONNX format for cross-language compatibility, uses input features such as iPhone version, damage percentage, battery health, purchase year, and usage. We evaluate each backend based on latency, throughput, transfer rate, memory consumption, and development complexity. Our findings provide actionable insights for engineering teams deploying AI inference APIs in production environments. All source code, containerized applications, and benchmark results are open-sourced to promote reproducibility and transparency.",
+    keywords: ["AI APIs", "Crow","FastAPI", "Springboot", "Express", "ONNX", "Express", "Docker"],
+    link: "https://ijsrem.com/download/viper-http-web-server-a-custom-web-server/",
   },
   {
-    title: "Scalable Distributed Training for Large Language Models",
-    authors: ["Your Name", "Research Team Lead", "Co-Author 3"],
-    venue: "Neural Information Processing Systems (NeurIPS) 2023",
-    date: "2023-12-10",
+    title: "VIPER HTTP WEB SERVER: Efficient Web Serving on Edge Devices",
+    authors: ["Tanishq Rawat"],
+    venue: "International Journal of Science and Research (IJSR), IJSREM",
+    date: "2023-03-03",
+    abstract:"This research paper presents the design and implementation of a Web Server designed in C++ which is a Custom Web server that is it can be used for specific tasks which makes it faster than other open-source web servers it can also be used to meet the specific needs of a particular organization. The paper discusses the challenges faced during the development process and the solutions that were implemented to overcome them. Performance tests were conducted to evaluate the server's efficiency and effectiveness using different web applications that interact with Data Bases and external Third Party APIs, and the results demonstrate that it performs at a high level even under heavy loads. Overall, this paper provides valuable insights into the development of custom web servers and highlights the benefits of creating a tailored solution for specific organizational needs.",
+    keywords: ["Socket Programming", "HTTP Server","C++", "TCP/IP"],
+    link: "https://ijsrem.com/download/viper-http-web-server-a-custom-web-server/",
+  },
+  {
+    title: "TICKETLESS ENTRY SYSTEM TO MONUMENTS/MUESUM",
+    authors: ["Tanishq Rawat", "Sarthak Jain", "Tanish Solanki"],
+    venue: "International Journal of Science and Research (IJSR), IJSREM",
+    date: "2022-11-08",
     abstract:
-      "We introduce a new distributed training framework that enables efficient training of large language models across heterogeneous computing clusters. Our approach reduces training time by 35% while maintaining model quality.",
+      "Easing up the process of entry to museums and monuments with the help of a ticketless entry system. It will also help in keeping proper track of total number of people present at the said location, managing proper resources for the people present and preventing fraudulent entries for the people without tickets, the process of checking tickets can be optimized as only people with e-ticket would be able to enter the premises and all this would fasten up the process of getting entry. Also implementing the option to make payment through UPI is an ease for customers to easily make payments without getting in the hassle of net banking transactions. Providing an easy interface for user to interact with. A QR code or a quick response code is a type of matrix barcode (or two-dimensional barcode) QR codes use four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently.",
     keywords: ["Distributed Systems", "Large Language Models", "Parallel Computing", "Deep Learning"],
-    link: "#",
-    citations: 45,
-  },
-  {
-    title: "Privacy-Preserving Federated Learning with Differential Privacy",
-    authors: ["Your Name", "Privacy Research Group"],
-    venue: "IEEE Symposium on Security and Privacy 2023",
-    date: "2023-05-22",
-    abstract:
-      "This work addresses privacy concerns in federated learning by implementing differential privacy mechanisms that provide formal privacy guarantees while maintaining model utility across distributed clients.",
-    keywords: ["Federated Learning", "Differential Privacy", "Security", "Machine Learning"],
-    link: "#",
-    citations: 67,
-  },
-  {
-    title: "Real-time Anomaly Detection in High-Frequency Trading Systems",
-    authors: ["Your Name", "Industry Partner", "Co-Author 4"],
-    venue: "ACM SIGKDD Conference on Knowledge Discovery and Data Mining 2022",
-    date: "2022-08-14",
-    abstract:
-      "We present a real-time anomaly detection system capable of processing millions of trading events per second while maintaining low latency and high accuracy in identifying suspicious trading patterns.",
-    keywords: ["Anomaly Detection", "High-Frequency Trading", "Real-time Systems", "Financial Technology"],
-    link: "#",
-    citations: 89,
-  },
+    link: "https://ijsrem.com/download/ticketless-entry-system-to-monuments-muesum/",
+  }
 ]
 
 export function ResearchSection() {
@@ -104,17 +88,10 @@ export function ResearchSection() {
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
-                          {new Date(paper.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                          })}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <FileText className="h-4 w-4" />
-                          {paper.citations} citations
+                          {paper.date}
                         </div>
                       </div>
-                      <p className="font-medium text-foreground">{paper.venue}</p>
+                      <p className="font-medium text-foreground">Published in {paper.venue}</p>
                     </div>
                   </div>
                   <div className="flex gap-2">
