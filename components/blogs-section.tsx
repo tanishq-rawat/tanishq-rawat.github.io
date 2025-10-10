@@ -8,12 +8,21 @@ import { Calendar, Clock, ExternalLink } from "lucide-react"
 
 const blogPosts = [
   {
-    title: "The Polars Revolution: A Faster Alternative to Pandas?",
+    title: "Say Goodbye to Boring Endpoints: Master Dynamic Routing in FastAPI",
     excerpt:
       "Comparing pandas and polars performance benchmarks based on a set of operations.",
     date: "2025-05-19",
     readTime: "6 min read",
     tags: ["Pandas", "Polars", "Data Analysis", "Python"],
+    link: "https://medium.com/simform-engineering/the-polars-revolution-a-faster-alternative-to-pandas-db1572c89285",
+  },
+  {
+    title: "The Polars Revolution: A Faster Alternative to Pandas?",
+    excerpt:
+      "Dynamic routing in FastAPI enables you to generate endpoints programmatically, reduce duplication, and maintain a clean and well-organized application.",
+    date: "2025-10-10",
+    readTime: "6 min read",
+    tags: ["Backend", "FastAPI", "Scalable Architecture", "Dynamic Routing", "Rest APIs"],
     link: "https://medium.com/simform-engineering/the-polars-revolution-a-faster-alternative-to-pandas-db1572c89285",
   },
   {
@@ -51,16 +60,7 @@ const blogPosts = [
     readTime: "9 min read",
     tags: ["AWS", "Serverless", "Lambda", "APIs"],
     link: "https://tanishq0917t.medium.com/aws-lambda-208a2695533b",
-  },
-  {
-    title: "Online Compiler — Demonstration of SubProcess",
-    excerpt:
-      "A demonstration of building an online code compiler using Python's subprocess module.",
-    date: "2022-12-26",
-    readTime: "7 min read",
-    tags: ["Subprocess", "Online-Compilers", "Backend", "Python"],
-    link: "https://tanishq0917t.medium.com/online-compiler-demonstration-of-subprocess-7a961eef6536",
-  },
+  }
 ]
 
 export function BlogsSection() {
