@@ -14,7 +14,7 @@ const blogPosts = [
     date: "2025-05-19",
     readTime: "6 min read",
     tags: ["Pandas", "Polars", "Data Analysis", "Python"],
-    link: "https://medium.com/simform-engineering/the-polars-revolution-a-faster-alternative-to-pandas-db1572c89285",
+    link: "https://tanishq0917t.medium.com/say-goodbye-to-boring-endpoints-master-dynamic-routing-in-fastapi-bf4f05830d6b",
   },
   {
     title: "The Polars Revolution: A Faster Alternative to Pandas?",
