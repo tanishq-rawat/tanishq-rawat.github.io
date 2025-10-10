@@ -10,19 +10,19 @@ const blogPosts = [
   {
     title: "Say Goodbye to Boring Endpoints: Master Dynamic Routing in FastAPI",
     excerpt:
-      "Comparing pandas and polars performance benchmarks based on a set of operations.",
-    date: "2025-05-19",
+      "Dynamic routing in FastAPI enables you to generate endpoints programmatically, reduce duplication, and maintain a clean and well-organized application.",
+    date: "2025-10-10",
     readTime: "6 min read",
-    tags: ["Pandas", "Polars", "Data Analysis", "Python"],
+    tags: ["Backend", "FastAPI", "Scalable Architecture", "Dynamic Routing", "Rest APIs"],
     link: "https://tanishq0917t.medium.com/say-goodbye-to-boring-endpoints-master-dynamic-routing-in-fastapi-bf4f05830d6b",
   },
   {
     title: "The Polars Revolution: A Faster Alternative to Pandas?",
     excerpt:
-      "Dynamic routing in FastAPI enables you to generate endpoints programmatically, reduce duplication, and maintain a clean and well-organized application.",
-    date: "2025-10-10",
+      "Comparing pandas and polars performance benchmarks based on a set of operations.",
+    date: "2025-05-19",
     readTime: "6 min read",
-    tags: ["Backend", "FastAPI", "Scalable Architecture", "Dynamic Routing", "Rest APIs"],
+    tags: ["Pandas", "Polars", "Data Analysis", "Python"],
     link: "https://medium.com/simform-engineering/the-polars-revolution-a-faster-alternative-to-pandas-db1572c89285",
   },
   {
