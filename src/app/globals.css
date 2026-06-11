@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   DESIGN TOKENS — single source of truth for the visual system.
+   Layered dark theme: deep base, 3 elevated surfaces, two-channel accent
+   (teal = backend / healthy, violet = AI / neural).
+   ========================================================================== */
+
+:root {
+  /* Base + elevated surfaces (deep desaturated slate-indigo, not pure black) */
+  --base: #07090f;
+  --surface-0: #0a0d15;
+  --surface-1: #11151f;
+  --surface-2: #171c29;
+  --surface-3: #1f2535;
+
+  /* Hairlines / borders */
+  --border: #232a3a;
+  --border-strong: #303a4f;
+
+  /* Text */
+  --text: #e8ecf4;
+  --text-muted: #9aa6bd;
+  --text-faint: #828ea8; /* AA (~4.6:1 on base) while staying subordinate to muted */
+
+  /* Accents — primary teal (signal/uptime), secondary violet (AI/neural) */
+  --accent: #5eead4;
+  --accent-strong: #2dd4bf;
+  --accent-dim: #134e4a;
+  --violet: #a78bfa;
+  --violet-strong: #8b5cf6;
+  --violet-dim: #2e1f5e;
+
+  /* Glows (low opacity radial blooms) */
+  --glow-teal: rgba(45, 212, 191, 0.14);
+  --glow-violet: rgba(139, 92, 246, 0.12);
+
+  /* Per-section background hue tints (descending through the stack) */
+  --tint-hero: rgba(45, 212, 191, 0.04);
+  --tint-about: rgba(94, 234, 212, 0.025);
+  --tint-experience: rgba(139, 92, 246, 0.03);
+  --tint-projects: rgba(45, 212, 191, 0.03);
+  --tint-skills: rgba(139, 92, 246, 0.04);
+  --tint-blog: rgba(94, 234, 212, 0.025);
+
+  /* Type scale (rem) */
+  --fs-eyebrow: 0.75rem;
+  --fs-body: 1rem;
+
+  /* Layout */
+  --maxw: 72rem;
+  --nav-h: 4.25rem;
+
+  /* Easing / timing */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---- Tailwind v4 theme bridge: expose tokens as utilities ---- */
+@theme inline {
+  /* NOTE: do NOT expose a `base` color token — `text-base` would shadow
+     Tailwind's font-size utility. Use the `ink` token for the deep base color. */
+  --color-ink: var(--base);
+  --color-surface-0: var(--surface-0);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-violet: var(--violet);
+  --color-violet-strong: var(--violet-strong);
+
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --max-width-content: var(--maxw);
+}
+
+/* ============================================================================
+   BASE
+   ========================================================================== */
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--base);
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  /* Subtle global vignette + dual glow so the page never reads flat-black */
+  background-image:
+    radial-gradient(70rem 70rem at 80% -10%, var(--glow-violet), transparent 60%),
+    radial-gradient(60rem 60rem at 0% 5%, var(--glow-teal), transparent 55%);
+  background-attachment: fixed;
+}
+
+/* Film grain / noise overlay — sparing, fixed, non-interactive */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+::selection {
+  background: var(--accent-strong);
+  color: var(--base);
+}
+
+/* Visible keyboard focus (never removed) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* ============================================================================
+   UTILITIES / COMPONENTS
+   ========================================================================== */
+
+.container-page {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Mono eyebrow label — wide tracking uppercase structural device */
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent));
+}
+
+/* Display heading: tight leading */
+.display {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, var(--text) 30%, var(--accent) 70%, var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Circuit-line divider between sections */
+.circuit-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-strong) 20%,
+    var(--accent-dim) 50%,
+    var(--border-strong) 80%,
+    transparent
+  );
+  position: relative;
+}
+
+.circuit-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--accent);
+  box-shadow: 0 0 12px 2px var(--glow-teal);
+}
+
+/* Glass surface (navbar, drawer) */
+.glass {
+  background: color-mix(in srgb, var(--surface-1) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid color-mix(in srgb, var(--border-strong) 70%, transparent);
+}
+
+/* Faint background grid (parallax layer) */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 75%);
+}
+
+/* Tabular figures for stats */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================================
+   REDUCED MOTION — disable parallax & heavy animation
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
