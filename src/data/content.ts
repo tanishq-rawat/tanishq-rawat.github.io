@@ -42,7 +42,6 @@ export const socials: Social[] = [
   { key: "leetcode", label: "LeetCode", href: "https://leetcode.com/tanishqrawat8" },
   { key: "medium", label: "Medium", href: "https://tanishq0917t.medium.com" },
   { key: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/tanishqrawat17" },
-  { key: "x", label: "X", href: "https://x.com/tanishqrawat" },
 ];
 
 /* ----------------------------------- About ---------------------------------- */
