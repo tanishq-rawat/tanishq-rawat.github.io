@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0d15"/>
+      <stop offset="1" stop-color="#11151f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.1" r="0.6">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="#232a3a" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="472" x2="1200" y2="472"/>
+  </g>
+  <text x="80" y="250" font-family="monospace" font-size="22" letter-spacing="8" fill="#5eead4">BACKEND · AI · DISTRIBUTED SYSTEMS</text>
+  <text x="78" y="350" font-family="sans-serif" font-size="84" font-weight="700" fill="#e8ecf4">Tanishq Rawat</text>
+  <text x="80" y="420" font-family="sans-serif" font-size="34" fill="#9aa6bd">I architect scalable, fault-tolerant systems.</text>
+  <g>
+    <circle cx="1040" cy="120" r="8" fill="#5eead4"/>
+    <circle cx="1130" cy="180" r="8" fill="#5eead4"/>
+    <circle cx="1060" cy="230" r="8" fill="#a78bfa"/>
+    <g stroke="#2dd4bf" stroke-width="2" opacity="0.5">
+      <line x1="1040" y1="120" x2="1130" y2="180"/>
+      <line x1="1040" y1="120" x2="1060" y2="230"/>
+      <line x1="1130" y1="180" x2="1060" y2="230"/>
+    </g>
+  </g>
+</svg>
