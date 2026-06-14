@@ -161,7 +161,7 @@ export default function ChatbotWidget() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[70] flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[70] flex flex-col items-end gap-3">
       {/* Welcome popup bubble */}
       <AnimatePresence>
         {showPopup && !isOpen && (
@@ -202,8 +202,8 @@ export default function ChatbotWidget() {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="glass flex flex-col overflow-hidden rounded-2xl shadow-2xl"
             style={{
-              width: "min(380px, calc(100vw - 3rem))",
-              height: "min(560px, calc(100dvh - 6rem))",
+              width: "min(380px, calc(100vw - 2rem))",
+              height: "min(560px, calc(100dvh - 5rem))",
             }}
           >
             {/* Header */}
@@ -231,7 +231,7 @@ export default function ChatbotWidget() {
 
             {/* Messages */}
             <div
-              className="flex-1 overflow-y-auto px-4 py-4 space-y-3"
+              className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 py-4 space-y-3"
               style={{ scrollbarWidth: "thin" }}
             >
               {messages.map((msg, i) => {
