@@ -10,6 +10,7 @@ import Skills from "@/components/sections/Skills";
 import Blogs from "@/components/sections/Blogs";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 function Divider() {
   return (
@@ -52,6 +53,8 @@ export default function Home() {
         </main>
         <Footer />
       </div>
+
+      <ChatbotWidget />
     </SmoothScroll>
   );
 }
