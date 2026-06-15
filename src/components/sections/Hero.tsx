@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Download, Mail } from "lucide-react";
 import NetworkDiagram from "@/components/NetworkDiagram";
 import SocialRow from "@/components/SocialRow";
 import { profile } from "@/data/content";
@@ -75,6 +75,17 @@ export default function Hero() {
                 size={16}
                 className="transition-transform duration-200 group-hover:translate-x-1"
               />
+            </a>
+            <a
+              href={profile.resumeUrl}
+              download
+              className="group inline-flex items-center gap-2 rounded-lg border border-border-strong bg-surface-1/60 px-5 py-3 text-sm font-semibold text-text transition-colors duration-200 hover:border-accent hover:text-accent"
+            >
+              <Download
+                size={16}
+                className="transition-transform duration-200 group-hover:translate-y-0.5"
+              />
+              Resume
             </a>
             <a
               href="#contact"

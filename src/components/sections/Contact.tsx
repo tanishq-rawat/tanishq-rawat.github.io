@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight, Download, MapPin } from "lucide-react";
 import Section from "@/components/Section";
 import SocialRow from "@/components/SocialRow";
 import { profile } from "@/data/content";
@@ -49,6 +49,18 @@ export default function Contact() {
               <MapPin size={15} className="text-accent" />
               {profile.location}
             </p>
+
+            <a
+              href={profile.resumeUrl}
+              download
+              className="group mt-6 flex w-fit items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-ink transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              <Download
+                size={16}
+                className="transition-transform duration-200 group-hover:translate-y-0.5"
+              />
+              Download Résumé
+            </a>
           </div>
 
           <div className="flex flex-col items-start gap-3 md:items-end">

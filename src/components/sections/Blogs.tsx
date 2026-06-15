@@ -20,7 +20,7 @@ export default function Blogs() {
         initial="hidden"
         whileInView="show"
         viewport={viewportOnce}
-        className="grid gap-4 md:grid-cols-3"
+        className="flex flex-wrap justify-center gap-4"
       >
         {blogs.map((post) => (
           <motion.a
@@ -29,7 +29,7 @@ export default function Blogs() {
             target="_blank"
             rel="noopener noreferrer"
             variants={staggerItem}
-            className="group flex flex-col rounded-2xl border border-border bg-surface-1/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-surface-2/60"
+            className="group flex w-full flex-col rounded-2xl border border-border bg-surface-1/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-surface-2/60 sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]"
           >
             <div className="mb-4 flex items-center justify-between">
               <span className="rounded-md border border-border bg-ink/60 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-accent">

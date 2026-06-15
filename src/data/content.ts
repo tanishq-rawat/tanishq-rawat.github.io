@@ -142,7 +142,7 @@ export const projects: Project[] = [
     problem:
       "A secure code-execution service that runs user-submitted solutions inside isolated Docker containers, with a scalable evaluation pipeline using FastAPI, Redis, and Celery workers — enforcing resource limits and returning test-case results like LeetCode/HackerRank.",
     tech: ["FastAPI", "Docker", "Celery", "Redis", "Python", "GenAI"],
-    github: "https://github.com/tanishq-rawat",
+    github: "https://github.com/tanishq-rawat/Scalable-Code-Execution",
     featured: true,
   },
   {
@@ -217,6 +217,15 @@ export interface Blog {
 }
 
 export const blogs: Blog[] = [
+  {
+    title: "Scalable Code Evaluation Systems: A Backend Engineering Case Study",
+    excerpt:
+      "Have you ever wondered how your code compiles instantly on browser without even having compilers installed locally?",
+    readTime: "6 min read",
+    date: "Feb 2026",
+    tag: "System Design",
+    href: "https://medium.com/simform-engineering/scalable-code-evaluation-systems-a-backend-engineering-case-study-7cdb8fb82e29",
+  },
   {
     title: "Say Goodbye to Boring Endpoints: Master Dynamic Routing in FastAPI",
     excerpt:
