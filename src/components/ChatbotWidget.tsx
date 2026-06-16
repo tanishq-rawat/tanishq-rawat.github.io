@@ -79,6 +79,12 @@ export default function ChatbotWidget() {
       setInput("");
       setError(null);
 
+      // Collect history before appending the new turn (skip INITIAL greeting and empty placeholders)
+      const history = messages
+        .slice(1)
+        .filter((m) => m.content !== "")
+        .map(({ role, content }) => ({ role, content }));
+
       // Append user message + empty assistant placeholder
       setMessages((prev) => [
         ...prev,
@@ -95,7 +101,7 @@ export default function ChatbotWidget() {
         const res = await fetch(CHAT_STREAM_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ question }),
+          body: JSON.stringify({ question, history }),
           signal: controller.signal,
         });
 
@@ -150,7 +156,7 @@ export default function ChatbotWidget() {
         setStreaming(false);
       }
     },
-    [input, streaming]
+    [input, streaming, messages]
   );
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -233,6 +239,7 @@ export default function ChatbotWidget() {
             <div
               className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-4 py-4 space-y-3"
               style={{ scrollbarWidth: "thin" }}
+              onWheel={(e) => e.stopPropagation()}
             >
               {messages.map((msg, i) => {
                 const isStreamingThis =
