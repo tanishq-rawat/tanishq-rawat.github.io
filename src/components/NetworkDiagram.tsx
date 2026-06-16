@@ -168,7 +168,7 @@ export default function NetworkDiagram() {
                 y={n.y + (n.id === "queue" || n.id === "db" ? 34 : -20)}
                 textAnchor="middle"
                 fontFamily="var(--font-jetbrains-mono), monospace"
-                fontSize="16"
+                fontSize="19"
                 fontWeight="500"
                 letterSpacing="0.04em"
                 fill={isAI ? "#c4b5fd" : "#b8c2d6"}

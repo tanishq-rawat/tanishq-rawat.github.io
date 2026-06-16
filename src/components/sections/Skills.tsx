@@ -43,6 +43,13 @@ export default function Skills() {
             >
               <Icon size={16} className={isActive ? "text-accent" : "text-text-faint"} />
               {cat.label}
+              {isActive && (
+                <motion.span
+                  layoutId="skills-tab-indicator"
+                  className="absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-accent"
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                />
+              )}
             </button>
           );
         })}
@@ -74,7 +81,7 @@ export default function Skills() {
                   hidden: { opacity: 0, y: 12, scale: 0.96 },
                   show: { opacity: 1, y: 0, scale: 1 },
                 }}
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-1 px-3.5 py-2 text-sm text-text"
+                className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-1 px-3.5 py-2 text-sm text-text transition-colors duration-200 hover:border-accent/40 hover:bg-surface-2"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                 {skill}

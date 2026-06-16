@@ -25,7 +25,7 @@ export default function Experience() {
       index="02"
       eyebrow="Experience"
       title="Where I've shipped"
-      intro="Six years across data platforms, billing infrastructure, and AI services — building systems that stay up while they grow."
+      intro="Four+ years across data platforms, billing infrastructure, and AI services — building systems that stay up while they grow."
     >
       <div ref={railRef} className="relative">
         {/* Rail track — sits at the node-column centre (mobile col0, desktop col1). */}
@@ -69,7 +69,7 @@ export default function Experience() {
               </div>
 
               {/* Entry card */}
-              <div className="pb-2">
+              <div className="-m-4 rounded-xl p-4 pb-6 transition-colors duration-300 hover:bg-surface-1/40 focus-within:bg-surface-1/40">
                 <span className="mb-2 inline-block font-mono text-xs text-text-faint md:hidden">
                   {job.duration}
                 </span>

@@ -1,16 +1,29 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { ArrowUpRight, Github } from "lucide-react";
+import type { MouseEvent } from "react";
 import Section from "@/components/Section";
 import { projects, type Project } from "@/data/content";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 
 function ProjectCard({ project }: { project: Project }) {
   const featured = project.featured;
+  const reduce = useReducedMotion();
+
+  // Drive the hover glow toward the cursor by updating the --mx/--my CSS vars
+  // the radial-gradient below reads from.
+  const handleMouseMove = (e: MouseEvent<HTMLElement>) => {
+    if (reduce) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+    e.currentTarget.style.setProperty("--my", `${e.clientY - rect.top}px`);
+  };
+
   return (
     <motion.article
       variants={staggerItem}
+      onMouseMove={handleMouseMove}
       className={`group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface-1/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-surface-2/60 md:p-8 ${
         featured ? "sm:col-span-2" : ""
       }`}
@@ -21,7 +34,7 @@ function ProjectCard({ project }: { project: Project }) {
         className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
           background:
-            "radial-gradient(40rem 20rem at var(--mx,50%) 0%, var(--glow-teal), transparent 60%)",
+            "radial-gradient(28rem 18rem at var(--mx,50%) var(--my,0%), var(--glow-teal), transparent 60%)",
         }}
       />
 

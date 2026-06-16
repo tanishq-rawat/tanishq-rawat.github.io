@@ -24,7 +24,7 @@ export default function Hero() {
       aria-label="Introduction"
       className="relative flex min-h-dvh items-center overflow-hidden pt-28 pb-16 md:pt-32"
     >
-      <div className="container-page grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="container-page grid items-center gap-10 lg:gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Left — identity */}
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.p
@@ -38,7 +38,7 @@ export default function Hero() {
           <motion.h1
             variants={item}
             transition={{ duration: 0.6, ease: EASE_OUT }}
-            className="display text-[2.75rem] leading-[1.02] sm:text-6xl lg:text-7xl"
+            className="display display-fluid leading-[1.02]"
           >
             <span className="text-text">{profile.name}</span>
           </motion.h1>

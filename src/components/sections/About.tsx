@@ -36,7 +36,7 @@ export default function About() {
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="grid h-fit grid-cols-2 gap-px overflow-hidden rounded-xl border border-border bg-border"
+          className="grid h-fit grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2"
         >
           {about.facts.map((f) => (
             <motion.div
@@ -48,7 +48,7 @@ export default function About() {
                 <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                 {f.label}
               </dt>
-              <dd className="tabular mt-2 font-display text-3xl font-semibold text-text">
+              <dd className="tabular mt-2 font-display text-[1.75rem] font-semibold text-text sm:text-3xl">
                 {f.value}
               </dd>
             </motion.div>

@@ -35,7 +35,7 @@ export default function Section({
           </p>
           <h2
             id={`${id}-heading`}
-            className="display text-3xl sm:text-4xl md:text-5xl text-text"
+            className="display h2-fluid text-text"
           >
             {title}
           </h2>

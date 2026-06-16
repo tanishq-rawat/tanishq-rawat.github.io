@@ -34,14 +34,14 @@ export default function Contact() {
         />
 
         <div className="relative flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div>
+          <div className="min-w-0">
             <a
               href={`mailto:${profile.email}`}
-              className="group inline-flex items-center gap-3 font-display text-2xl font-semibold text-text transition-colors hover:text-accent sm:text-3xl md:text-4xl"
+              className="group inline-flex max-w-full items-center gap-3 font-display text-2xl font-semibold text-text transition-colors hover:text-accent sm:text-3xl md:text-4xl"
             >
-              {profile.email}
+              <span className="min-w-0 break-words">{profile.email}</span>
               <ArrowUpRight
-                className="text-text-faint transition-all duration-200 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
+                className="shrink-0 text-text-faint transition-all duration-200 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
                 size={28}
               />
             </a>

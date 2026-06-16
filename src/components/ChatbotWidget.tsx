@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, FormEvent, useCallback } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { MessageCircle, X, Bot, Send } from "lucide-react";
+import { X, Bot, Send } from "lucide-react";
 
 const CHAT_STREAM_URL = "https://chatbot-739f48fb.fastapicloud.dev/chat?stream=true";
 
@@ -249,7 +249,7 @@ export default function ChatbotWidget() {
                       </span>
                     )}
                     <div
-                      className={`max-w-[80%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+                      className={`max-w-[80%] whitespace-pre-wrap break-words rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
                         msg.role === "user"
                           ? "rounded-br-sm bg-accent text-ink"
                           : "rounded-bl-sm bg-surface-2 text-text"
@@ -311,7 +311,7 @@ export default function ChatbotWidget() {
                 type="submit"
                 disabled={!input.trim() || streaming}
                 aria-label="Send"
-                className="grid h-9 w-9 flex-shrink-0 place-items-center rounded-xl bg-accent text-ink transition-opacity disabled:opacity-40 enabled:hover:opacity-90"
+                className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-accent text-ink transition-opacity disabled:opacity-40 enabled:hover:opacity-90"
               >
                 <Send size={15} />
               </button>
@@ -352,7 +352,7 @@ export default function ChatbotWidget() {
               transition={{ duration: 0.18 }}
               className="grid place-items-center"
             >
-              <MessageCircle size={22} className="text-ink" />
+              <Bot size={24} className="text-ink" />
             </motion.span>
           )}
         </AnimatePresence>
