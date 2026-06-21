@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { geistSans, jetbrainsMono, spaceGrotesk } from "./fonts";
 import { profile } from "@/data/content";
+import TrackVisit from "@/components/TrackVisit";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tanishqrawat.dev";
@@ -55,7 +56,10 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${geistSans.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <TrackVisit />
+        {children}
+      </body>
     </html>
   );
 }
