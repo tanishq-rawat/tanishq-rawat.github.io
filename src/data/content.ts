@@ -216,6 +216,8 @@ export interface Blog {
   href: string;
 }
 
+// Random comment
+
 export const blogs: Blog[] = [
   {
     title: "Scalable Code Evaluation Systems: A Backend Engineering Case Study",
