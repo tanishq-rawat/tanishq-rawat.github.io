@@ -73,9 +73,22 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
+    company: "Everestek",
+    role: "Senior Software Engineer (AI)",
+    duration: "July 2026 — Present",
+    location: "Indore, India",
+    bullets: [
+      "Architected a multi-agent AI platform to generate, maintain, review and deploy microservices for clients, enabling rapid prototyping and deployment of AI-powered applications.",
+      "Designed and implemented code migration agents to automatically refactor legacy codebases into modern frameworks, reducing manual effort by 70%.",
+      "Reviewed and optimized cost and performance of AI-generated microservices, ensuring efficient resource utilization and scalability.",
+      "Integrated Claude SDK to power custom AI agents with Claude Code tools, enabling advanced code generation and review capabilities.",
+    ],
+    tech: ["Agentic AI","Generative AI","AWS","LangChain","FastAPI","Microservices","Claude SDK"],
+  },
+  {
     company: "Simform Solutions",
     role: "Software Engineer",
-    duration: "Feb 2025 — Present",
+    duration: "Feb 2025 — Jun 2026",
     location: "Remote",
     bullets: [
       "Architected a multi-tenant FastAPI backend using a strict repository + service pattern (SOLID-aligned), reducing code change ripple effects by 40%.",
